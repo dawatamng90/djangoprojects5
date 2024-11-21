@@ -1,0 +1,20 @@
+h1{
+    color:red;
+}
+
+.navbar{
+    background-color: blueviolet;
+}
+
+/* Styling the anchor tags inside the navbar */
+.navbar a {
+    color: white; /* Change text color to blue */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Hover effect to change color when the user hovers over the links */
+.navbar a:hover {
+    color: yellowgreen; /* Darker blue on hover */
+    text-decoration: underline; /* Add underline on hover */
+}

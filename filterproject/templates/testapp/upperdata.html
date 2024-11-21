@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load custom_filters %}
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper</title>
+    <link rel="stylesheet" href="{% static 'css/filter1.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        {% for record in records %}
+        <h1>{{ record.name }} Information</h1>
+        <ul>
+            <li>{{ record.name | fupper }}</li>
+            <li>{{ record.subject | lower }}</li>
+            <li>{{ record.dept | title }}</li>
+            <li>{{ record.date | date:'d-m-Y' }}</li>
+        </ul>
+        <hr>
+        {% empty %}
+        <p>No record found.</p>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
